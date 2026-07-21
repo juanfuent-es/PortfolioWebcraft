@@ -1,36 +1,112 @@
-# Portfolio Webcraft Starter
+# Portfolio WebCraft
 
-Aprende cómo funciona la web y construye tu propio portafolio hecho por ti y para ti.
+## Construye tu portafolio web desde cero.
 
-## Objetivo
+### Descriptor
 
-Este repositorio es una base mínima para construir un portafolio web estático usando:
+Portfolio WebCraft es un programa de acompañamiento dirigido a profesionales creativos que desean construir, publicar y mantener su propio portafolio web.
 
-- Markdown
-- HTML
-- CSS
-- Visual Studio Code
-- GitHub
-- GitHub Pages
-- IA como asistencia
+A lo largo de doce sesiones aprenderán a organizar su trabajo, diseñar un sistema visual, desarrollar un sitio con HTML, CSS y JavaScript asistidos por IA, y publicarlo utilizando herramientas actuales, comprendiendo cada decisión que toman durante el proceso.
 
-## Regla principal
+---
 
-Antes de escribir código, define:
+# Objetivo general
 
-1. Qué quieres mostrar.
-2. Cómo organizas tus proyectos.
-3. Qué sistema visual usarás.
-4. Qué estructura tendrá tu sitio.
+Diseñar, construir y publicar un portafolio web profesional mediante una metodología que integra organización de información, sistemas visuales, desarrollo web e inteligencia artificial como herramienta de apoyo, permitiendo que cada participante mantenga y evolucione su sitio de forma autónoma.
 
+---
+
+# Unidad 1
+## Identidad
+
+### Objetivo
+
+Definir el propósito del portafolio, la identidad profesional y el contenido que dará origen al proyecto.
+
+### Entregable
+
+README profesional con la definición del proyecto personal y un inventario inicial de contenido.
+
+---
+
+# Unidad 2
+## Contenido
+
+### Objetivo
+
+Transformar el material disponible en un sistema de información claro, priorizado y preparado para convertirse en un sitio web.
+
+### Entregable
+
+Arquitectura de información completa, mapa del sitio y organización de contenidos.
+
+---
+
+# Unidad 3
+## Sistema Visual
+
+### Objetivo
+
+Definir las reglas visuales que darán consistencia al portafolio antes de comenzar su implementación.
+
+### Entregable
+
+Sistema visual del proyecto (tipografía, color, composición, componentes y referencias).
+
+---
+
+# Unidad 4
 ## Estructura
 
-- `content/` contiene la información del portafolio.
-- `docs/` contiene guías de trabajo.
-- `assets/images/` contiene imágenes.
-- `index.html` contiene la estructura del sitio.
-- `styles.css` contiene el sistema visual.
+### Objetivo
 
-## Resultado esperado
+Construir la estructura semántica del sitio traduciendo la arquitectura de información al lenguaje HTML.
 
-Un portafolio web publicado en GitHub Pages.
+### Entregable
+
+Todas las vistas principales construidas y conectadas mediante HTML.
+
+---
+
+# Unidad 5
+## Estilos
+
+### Objetivo
+
+Transformar la estructura en una interfaz funcional, consistente y adaptable mediante CSS.
+
+### Entregable
+
+Portafolio completamente estilizado y responsive.
+
+---
+
+# Unidad 6
+## Interacción
+
+### Objetivo
+
+Incorporar comportamiento, microinteracciones y flujos básicos utilizando JavaScript como complemento de la experiencia.
+
+### Entregable
+
+Portafolio funcional con interacciones y comportamiento dinámico.
+
+---
+
+# Unidad 7
+## Publicación
+
+### Objetivo
+
+Publicar el proyecto, comprender su flujo de mantenimiento y establecer una base para su evolución futura.
+
+### Entregable
+
+Portafolio publicado en línea mediante GitHub Pages, documentado y listo para continuar creciendo.
+
+---
+
+# Proyecto Final
+
+Cada participante concluirá el programa con un portafolio web publicado que represente su práctica profesional, organizado mediante una metodología reproducible y preparado para evolucionar conforme cambie su trabajo.
