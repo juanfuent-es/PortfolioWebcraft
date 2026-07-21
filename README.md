@@ -3,8 +3,8 @@
 ## Construye tu propio portafolio mientras aprendes cómo funciona la web.
 
 Aprende a organizar tu contenido, estructurar información y construir un sistema visual para dar vida a tu portafolio y publicarlo en línea.
-
 No necesitas saber programar. Aprenderás los fundamentos y conceptos fundamentales del diseño y desarrollo web para escribir código asistido por IA. Tú defines la dirección creativa; la IA te ayuda a construirla.
+
 ---
 
 # Objetivo general
