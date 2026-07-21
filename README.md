@@ -1,13 +1,10 @@
 # Portfolio WebCraft
 
-## Construye tu portafolio web desde cero.
+## Construye tu propio portafolio mientras aprendes cómo funciona la web.
 
-### Descriptor
+Aprende a organizar tu contenido, estructurar información y construir un sistema visual para dar vida a tu portafolio y publicarlo en línea.
 
-Portfolio WebCraft es un programa de acompañamiento dirigido a profesionales creativos que desean construir, publicar y mantener su propio portafolio web.
-
-A lo largo de doce sesiones aprenderán a organizar su trabajo, diseñar un sistema visual, desarrollar un sitio con HTML, CSS y JavaScript asistidos por IA, y publicarlo utilizando herramientas actuales, comprendiendo cada decisión que toman durante el proceso.
-
+No necesitas saber programar. Aprenderás los fundamentos y conceptos fundamentales del diseño y desarrollo web para escribir código asistido por IA. Tú defines la dirección creativa; la IA te ayuda a construirla.
 ---
 
 # Objetivo general
