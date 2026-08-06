@@ -1,4 +1,8 @@
 import createMDX from "@next/mdx";
+import { dirname } from "node:path";
+import { fileURLToPath } from "node:url";
+
+const rootDir = dirname(fileURLToPath(import.meta.url));
 
 const withMDX = createMDX({
   extension: /\.mdx?$/,
@@ -9,13 +13,10 @@ const withMDX = createMDX({
 });
 
 const nextConfig = {
-  turbopack: {},
-  pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
-  images: {
-    remotePatterns: [
-      new URL("https://assets.tailwindcss.com/templates/compass/**"),
-    ],
+  turbopack: {
+    root: rootDir,
   },
+  pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
 };
 
 export default withMDX(nextConfig);

@@ -102,7 +102,7 @@ export function SidebarLayout({ modules, children }) {
         className="group"
       >
         <aside className="fixed inset-y-0 left-0 w-2xs overflow-y-auto border-r border-gray-950/10 group-data-sidebar-collapsed:hidden max-xl:hidden dark:border-white/10">
-          <nav aria-label="Course" className="px-6 py-4">
+          <nav aria-label="Curso" className="px-6 py-4">
             <div className="sticky top-4 flex h-6">
               <IconButton onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
                 <SidebarIcon className="shrink-0 stroke-gray-950 dark:stroke-white" />

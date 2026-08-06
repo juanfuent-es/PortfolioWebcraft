@@ -1,13 +1,6 @@
 "use client";
 
-import {
-  Dropdown,
-  DropdownButton,
-  DropdownItem,
-  DropdownMenu,
-} from "@/components/dropdown";
 import { IconButton } from "@/components/icon-button";
-import { ChevronDownIcon } from "@/icons/chevron-down-icon";
 import { CloseIcon } from "@/icons/close-icon";
 import { MenuIcon } from "@/icons/menu-icon";
 import {
@@ -50,32 +43,14 @@ function MobileNavigation({ open, onClose }) {
           <div className="mt-4">
             <div className="flex flex-col gap-y-2">
               {[
-                ["Course", "/"],
-                ["Interviews", "/interviews"],
-                ["Resources", "/resources"],
+                ["Curso", "/"],
+                ["Recursos", "/resources"],
               ].map(([title, href]) => (
                 <CloseButton
                   as={Link}
                   key={href}
                   href={href}
                   className="block rounded-md px-4 py-1.5 text-lg/7 font-medium tracking-tight text-gray-950 hover:bg-gray-950/5 dark:text-white dark:hover:bg-white/5"
-                >
-                  {title}
-                </CloseButton>
-              ))}
-            </div>
-            <div className="mt-6 flex flex-col gap-y-2">
-              <h3 className="px-4 py-1 text-sm/7 text-gray-500">Account</h3>
-              {[
-                ["Settings", "#"],
-                ["Support", "#"],
-                ["Sign out", "/login"],
-              ].map(([title, href], index) => (
-                <CloseButton
-                  as={Link}
-                  key={index}
-                  href={href}
-                  className="rounded-md px-4 py-1 text-sm/7 font-semibold text-gray-950 hover:bg-gray-950/5 dark:text-white dark:hover:bg-white/5"
                 >
                   {title}
                 </CloseButton>
@@ -101,20 +76,8 @@ function SiteNavigation() {
         onClose={() => setMobileMenuOpen(false)}
       />
       <div className="flex gap-x-6 text-sm/6 text-gray-950 max-lg:hidden dark:text-white">
-        <Link href="/">Course</Link>
-        <Link href="/interviews">Interviews</Link>
-        <Link href="/resources">Resources</Link>
-        <Dropdown>
-          <DropdownButton className="inline-flex items-center gap-x-2 focus:not-data-focus:outline-none">
-            Account
-            <ChevronDownIcon className="stroke-gray-950 dark:stroke-white" />
-          </DropdownButton>
-          <DropdownMenu anchor="bottom end">
-            <DropdownItem href="#">Settings</DropdownItem>
-            <DropdownItem href="#">Support</DropdownItem>
-            <DropdownItem href="/login">Sign out</DropdownItem>
-          </DropdownMenu>
-        </Dropdown>
+        <Link href="/">Curso</Link>
+        <Link href="/resources">Recursos</Link>
       </div>
     </nav>
   );

@@ -1,4 +1,3 @@
-import { Book, Bookshelf } from "@/components/bookshelf";
 import {
   Breadcrumb,
   BreadcrumbHome,
@@ -8,12 +7,11 @@ import {
 import { CenteredPageLayout } from "@/components/centered-layout";
 import { ContentLink } from "@/components/content-link";
 import { PageSection } from "@/components/page-section";
-import { VideoCard } from "@/components/video-card";
 
 export const metadata = {
-  title: "Resources - Compass",
+  title: "Recursos - Portfolio WebCraft",
   description:
-    "A collection of resources that can help you navigate uncertainty and make choices aligned with your values and goals.",
+    "Materiales de trabajo para organizar, diseñar, construir y publicar el portafolio durante el programa.",
 };
 
 export default function Page() {
@@ -23,176 +21,99 @@ export default function Page() {
         <Breadcrumbs>
           <BreadcrumbHome />
           <BreadcrumbSeparator />
-          <Breadcrumb>Resources</Breadcrumb>
+          <Breadcrumb>Recursos</Breadcrumb>
         </Breadcrumbs>
       }
     >
       <h1 className="mt-10 text-3xl/10 font-normal tracking-tight text-gray-950 sm:mt-14 dark:text-white">
-        Resources
+        Recursos
       </h1>
       <p className="mt-6 max-w-xl text-base/7 text-gray-600 dark:text-gray-400">
-        A collection of resources that can help you navigate uncertainty and
-        make choices aligned with your values and goals.
+        Materiales de trabajo para convertir contenido, identidad, estructura,
+        sistema visual y código en un portafolio publicado y mantenible.
       </p>
 
       <div className="mt-16 space-y-16">
-        <PageSection title={<h2>Writing</h2>}>
+        <PageSection title={<h2>Documentos base</h2>}>
           <p className="text-sm/8 text-gray-600 dark:text-gray-400">
-            Learn to separate signal from noise, and instincts from impulses.
+            Archivos vivos para registrar decisiones y evitar que el proyecto
+            dependa de memoria, intuición o conversaciones sueltas.
           </p>
           <div className="mt-8 max-w-2xl space-y-6">
             <ContentLink
               type="article"
-              title="The Illusion of Choice"
-              description="How Modern Neuroscience Supports Determinism."
-              href="#"
+              title="Inventario de contenido"
+              description="Listado de proyectos, recursos disponibles, estado del material y vacíos por resolver."
+              href="/inventario-de-contenido"
             />
             <ContentLink
               type="article"
-              title="Beyond Free Will: A Brief History of Deterministic Philosophy"
-              description="Tracing deterministic thought from ancient stoics to modern neuroscience."
-              href="#"
+              title="Síntesis conceptual"
+              description="Texto de identidad profesional construido desde patrones reales del trabajo."
+              href="/sintesis-conceptual"
             />
             <ContentLink
               type="article"
-              title="Your Life Story Was Written Before You Were Born"
-              description="How to fend off Nihilism when you have no agency."
-              href="#"
-            />
-            <ContentLink
-              type="article"
-              title="5 Ways Your 'Free Will' is Actually Making You Miserable"
-              description="How belief in choice creates unnecessary suffering in everyday life."
-              href="#"
-            />
-            <ContentLink
-              type="article"
-              title="The Accountability Myth: Why Self-Blame Makes No Logical Sense"
-              description="Examining the logical inconsistencies in holding yourself responsible."
-              href="#"
+              title="Mapa de navegación"
+              description="Estructura para recorrer el portafolio según jerarquía, relaciones y audiencia."
+              href="/estructura-de-navegacion"
             />
           </div>
         </PageSection>
 
-        <PageSection title={<h2>Podcasts</h2>}>
+        <PageSection title={<h2>Sistema de construcción</h2>}>
           <p className="text-sm/8 text-gray-600 dark:text-gray-400">
-            Compelling conversations from the forefathers of determinism and
-            free will.
-          </p>
-          <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-3">
-            <VideoCard
-              title="Thus Spoke the Podcast: EP 272"
-              subtitle="Friedrich Nietzsche"
-              url="#"
-              target="_blank"
-              thumbnailUrl="https://assets.tailwindcss.com/templates/compass/nietzsche-thumbnail.png"
-              duration={3720}
-            />
-            <VideoCard
-              title="Monads & Mics with Mark Zuckerberg"
-              subtitle="Gottfried Wilhelm Leibniz"
-              url="#"
-              target="_blank"
-              thumbnailUrl="https://assets.tailwindcss.com/templates/compass/liebniz-thumbnail.png"
-              duration={4454}
-            />
-            <VideoCard
-              title="The John Locke Show"
-              subtitle="Tabula Rasa Media"
-              url="#"
-              target="_blank"
-              thumbnailUrl="https://assets.tailwindcss.com/templates/compass/locke-thumbnail.png"
-              duration={5040}
-            />
-          </div>
-        </PageSection>
-
-        <PageSection title={<h2>Books</h2>}>
-          <p className="text-sm/8 text-gray-600 dark:text-gray-400">
-            A carefully curated collection of books that explore the
-            intersection of choice, purpose, and personal growth.
-          </p>
-          <Bookshelf className="mt-8">
-            <Book
-              title="I Was Always Going to Write This Book"
-              author="Nora Flich"
-              imageUrl="https://assets.tailwindcss.com/templates/compass/i-was-always-going-to-write-this-book.png"
-              imageWidth={1024}
-              imageHeight={1280}
-              href="#"
-            />
-            <Book
-              title="Preordained and Prosperous"
-              author="Skylar Vonn"
-              imageUrl="https://assets.tailwindcss.com/templates/compass/preordained-and-prosperous.png"
-              imageWidth={1024}
-              imageHeight={1536}
-              href="#"
-            />
-            <Book
-              title="Yes, But Why Did I Think That?"
-              author="J. Ellington Splice, PhD"
-              imageUrl="https://assets.tailwindcss.com/templates/compass/yes-but-why-did-i-think-that.png"
-              imageWidth={1024}
-              imageHeight={1425}
-              href="#"
-            />
-            <Book
-              title="The Responsibility Loophole"
-              author="Dr. Frida Noone, PhD"
-              imageUrl="https://assets.tailwindcss.com/templates/compass/the-responsiblity-loophole.png"
-              imageWidth={1024}
-              imageHeight={1356}
-              href="#"
-            />
-            <Book
-              title="The Path and the Passenger"
-              author="Eleanor Vann"
-              imageUrl="https://assets.tailwindcss.com/templates/compass/the-path-and-the-passenger.png"
-              imageWidth={1024}
-              imageHeight={1536}
-              href="#"
-            />
-          </Bookshelf>
-        </PageSection>
-
-        <PageSection title={<h2>Tools</h2>}>
-          <p className="text-sm/8 text-gray-600 dark:text-gray-400">
-            Things I use to calm my mind and make decisions.
+            Recursos para pasar de decisiones conceptuales a implementación sin
+            perder claridad ni mantenibilidad.
           </p>
           <div className="@container">
             <div className="mt-8 grid grid-cols-1 gap-x-8 gap-y-6 @2xl:grid-cols-2">
               <ContentLink
                 type="tool"
-                title="Deterministic Coin"
-                description="A coin with heads on both sides."
-                href="#"
+                title="Especificación"
+                description="Instrucciones precisas para construir con IA sin delegar criterio ni dirección creativa."
+                href="/especificacion"
               />
               <ContentLink
                 type="tool"
-                title="Magic 8-Ball"
-                description={`Every answer is just the shrugging emoji.`}
-                href="#"
+                title="Estructura del proyecto"
+                description="Organización de archivos que separa contenido, presentación, comportamiento y documentación."
+                href="/estructura-del-proyecto"
               />
               <ContentLink
                 type="tool"
-                title="BetterHelp"
-                description="Sometimes you just need to talk to someone."
-                href="#"
+                title="HTML semántico"
+                description="Marcado claro para representar la arquitectura de información del portafolio."
+                href="/html-semantico"
               />
               <ContentLink
                 type="tool"
-                title="Post-it Notes"
-                description="I use the green ones for my good ideas."
-                href="#"
-              />
-              <ContentLink
-                type="tool"
-                title="The Mobius Decision Tree"
-                description="A decision-making flowchart that always leads back to the same outcome."
-                href="#"
+                title="Sistema visual en CSS"
+                description="Reglas reutilizables de tipografía, color, espaciado y componentes."
+                href="/sistema-visual-css"
               />
             </div>
+          </div>
+        </PageSection>
+
+        <PageSection title={<h2>Revisión final</h2>}>
+          <p className="text-sm/8 text-gray-600 dark:text-gray-400">
+            Puntos de control para publicar con una base funcional y poder
+            evolucionar el portafolio después del curso.
+          </p>
+          <div className="mt-8 max-w-2xl space-y-6">
+            <ContentLink
+              type="article"
+              title="Optimización"
+              description="Revisión de rendimiento, accesibilidad, responsive, enlaces, imágenes y metadatos."
+              href="/optimizacion"
+            />
+            <ContentLink
+              type="article"
+              title="Evolución"
+              description="Criterios para actualizar el portafolio como sistema vivo, no como entrega cerrada."
+              href="/evolucion"
+            />
           </div>
         </PageSection>
       </div>

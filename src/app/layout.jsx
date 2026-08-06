@@ -15,7 +15,7 @@ const InterVariable = localFont({
 export default function RootLayout({ children }) {
   return (
     <html
-      lang="en"
+      lang="es"
       className={clsx(
         GeistMono.variable,
         InterVariable.variable,
