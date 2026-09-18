@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Git y GitHub | Portfolio WebCraft</title>
+    <meta name="description" content="Introducción a Git, GitHub, SSH y el flujo básico de trabajo para registrar, respaldar y sincronizar un proyecto web.">
+
+    <meta property="og:title" content="Git y GitHub | Portfolio WebCraft">
+    <meta property="og:description" content="Introducción a Git, GitHub, SSH y el flujo básico de trabajo para registrar, respaldar y sincronizar un proyecto web.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_MX">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Git y GitHub | Portfolio WebCraft">
+    <meta name="twitter:description" content="Introducción a Git, GitHub, SSH y el flujo básico de trabajo para registrar, respaldar y sincronizar un proyecto web.">
+
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header id="inicio">
+      <p>Portfolio WebCraft · Ambiente de Desarrollo</p>
+      <h1>Git y GitHub</h1>
+      <p>Control de versiones, repositorios remotos y flujo básico de trabajo para proyectos web.</p>
+    </header>
+
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="#git">Git</a></li>
+        <li><a href="#repositorio">Repositorio</a></li>
+        <li><a href="#github">GitHub</a></li>
+        <li><a href="#ssh">SSH</a></li>
+        <li><a href="#llave-ssh">Llave SSH</a></li>
+        <li><a href="#identidad-git">Identidad</a></li>
+        <li><a href="#flujo-git">Flujo Git</a></li>
+        <li><a href="#vscode">VS Code</a></li>
+        <li><a href="#bibliografia">Bibliografía</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="git">
+        <h2>¿Qué es Git?</h2>
+        <p>
+          Git es un sistema de control de versiones. Sirve para registrar el historial de un proyecto y poder:
+        </p>
+        <ul>
+          <li>Guardar cambios de forma ordenada.</li>
+          <li>Volver a estados anteriores.</li>
+          <li>Entender cómo evoluciona un proyecto.</li>
+        </ul>
+        <p>
+          Git vive en tu computadora y funciona incluso sin internet.
+        </p>
+        <p>
+          Git no es "programar". Es una herramienta de proceso, como guardar versiones, pero de forma inteligente.
+        </p>
+      </section>
+
+      <section id="repositorio">
+        <h2>¿Qué es un repositorio?</h2>
+        <p>
+          Un repositorio es la carpeta del proyecto que Git está monitoreando.
+        </p>
+        <p>Contiene:</p>
+        <ul>
+          <li>Archivos del proyecto: HTML, CSS, imágenes, etc.</li>
+          <li>El historial de cambios.</li>
+          <li>Información de versiones.</li>
+        </ul>
+
+        <article>
+          <h3>Tipos de repositorio</h3>
+          <ul>
+            <li><strong>Repositorio local:</strong> está en tu computadora.</li>
+            <li><strong>Repositorio remoto:</strong> está en internet, por ejemplo, en GitHub.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="github">
+        <h2>¿Qué es GitHub?</h2>
+        <p>
+          GitHub es una plataforma en línea para alojar repositorios.
+        </p>
+        <p>GitHub sirve para:</p>
+        <ul>
+          <li>Respaldar proyectos.</li>
+          <li>Compartir código.</li>
+          <li>Trabajar en equipo.</li>
+          <li>Entregar trabajos académicos.</li>
+          <li>Mostrar proyectos públicamente.</li>
+        </ul>
+
+        <article>
+          <h3>Relación Git - GitHub</h3>
+          <ul>
+            <li><strong>Git:</strong> herramienta local que guarda versiones.</li>
+            <li><strong>GitHub:</strong> plataforma que almacena repositorios en la nube.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="ssh">
+        <h2>¿Qué es SSH?</h2>
+        <p>
+          SSH, Secure Shell, es un método de conexión segura entre tu computadora y GitHub.
+        </p>
+        <p>
+          En lugar de escribir usuario y contraseña cada vez, SSH usa:
+        </p>
+        <ul>
+          <li>Un par de llaves digitales.</li>
+          <li>Una llave privada, que se queda en tu computadora.</li>
+          <li>Una llave pública, que se registra en GitHub.</li>
+        </ul>
+        <p>
+          GitHub usa esa llave para reconocer que eres tú.
+        </p>
+      </section>
+
+      <section id="llave-ssh">
+        <h2>Crear una llave SSH</h2>
+        <p>
+          Estos pasos se hacen una sola vez en tu computadora.
+        </p>
+
+        <article>
+          <h3>Paso 1 · Abrir la terminal</h3>
+          <ul>
+            <li>En macOS o Linux: Terminal.</li>
+            <li>En Windows: Git Bash o Terminal de Visual Studio Code.</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>Paso 2 · Generar la llave SSH</h3>
+          <p>
+            Ejecuta el siguiente comando usando el correo con el que te registraste en GitHub:
+          </p>
+          <pre><code>ssh-keygen -t ed25519 -C "tucorreo@ejemplo.com"</code></pre>
+          <p>
+            Si tu sistema no soporta <code>ed25519</code>, usa:
+          </p>
+          <pre><code>ssh-keygen -t rsa -b 4096 -C "tucorreo@ejemplo.com"</code></pre>
+        </article>
+
+        <article>
+          <h3>Paso 3 · Confirmar ubicación</h3>
+          <p>Cuando pregunte:</p>
+          <pre><code>Enter a file in which to save the key</code></pre>
+          <p>
+            Presiona Enter para aceptar la ubicación por defecto.
+          </p>
+        </article>
+
+        <article>
+          <h3>Paso 4 · Passphrase opcional</h3>
+          <p>Puedes:</p>
+          <ul>
+            <li>Presionar Enter para no usar passphrase.</li>
+            <li>O escribir una para mayor seguridad.</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>Copiar la llave pública</h3>
+          <p>
+            La llave pública es la que se registra en GitHub. Para copiarla desde la terminal:
+          </p>
+          <pre><code>cat ~/.ssh/id_ed25519.pub</code></pre>
+          <p>
+            Copia todo el texto que aparece.
+          </p>
+        </article>
+
+        <article>
+          <h3>Registrar la llave en GitHub</h3>
+          <ol>
+            <li>Inicia sesión en GitHub.</li>
+            <li>Entra a tu foto de perfil, arriba a la derecha.</li>
+            <li>Selecciona Settings.</li>
+            <li>Entra a SSH and GPG keys.</li>
+            <li>Selecciona New SSH key.</li>
+            <li>Agrega un título descriptivo, por ejemplo: Laptop personal.</li>
+            <li>En Key type selecciona Authentication Key.</li>
+            <li>En Key pega la llave pública copiada.</li>
+            <li>Guarda los cambios.</li>
+          </ol>
+        </article>
+      </section>
+
+      <section id="identidad-git">
+        <h2>Identidad en Git</h2>
+        <p>
+          Asigna valores de nombre y correo electrónico en tu cuenta de Git para relacionar una identidad con los cambios.
+        </p>
+        <pre><code>git config user.name "YOUR_NAME"
+git config --global user.email "YOUR_EMAIL"</code></pre>
+      </section>
+
+      <section id="flujo-git">
+        <h2>Flujo básico de trabajo con Git</h2>
+        <p>
+          Este flujo describe el ciclo mínimo y más común para trabajar con Git desde la terminal, aplicable a proyectos individuales y académicos.
+        </p>
+
+        <article>
+          <h3><code>git status</code></h3>
+          <p>
+            Muestra el estado actual del repositorio.
+          </p>
+          <p>Permite saber:</p>
+          <ul>
+            <li>Qué archivos han sido modificados.</li>
+            <li>Qué archivos están listos para guardarse, o staged.</li>
+            <li>Qué archivos aún no están siendo rastreados por Git.</li>
+          </ul>
+          <p>
+            Se usa constantemente para entender en qué punto del flujo se encuentra el proyecto.
+          </p>
+        </article>
+
+        <article>
+          <h3><code>git add</code></h3>
+          <p>
+            Agrega archivos al área de preparación, conocida como staging area.
+          </p>
+          <p>
+            Sirve para indicar qué cambios específicos se desean guardar en el siguiente commit.
+          </p>
+          <p>Ejemplos:</p>
+          <pre><code>git add index.html
+git add .</code></pre>
+          <p>
+            <code>git add index.html</code> agrega un archivo específico. <code>git add .</code> agrega todos los cambios del proyecto.
+          </p>
+          <p>
+            No guarda cambios todavía, solo los prepara.
+          </p>
+        </article>
+
+        <article>
+          <h3><code>git commit -m "mensaje"</code></h3>
+          <p>
+            Guarda un estado del proyecto con un mensaje descriptivo.
+          </p>
+          <p>El commit:</p>
+          <ul>
+            <li>Crea un punto en el historial.</li>
+            <li>Permite volver a este estado más adelante.</li>
+            <li>Documenta qué se hizo y por qué.</li>
+          </ul>
+          <p>
+            El mensaje debe ser claro y breve, por ejemplo:
+          </p>
+          <pre><code>git commit -m "estructura inicial del sitio"
+git commit -m "ajustes de tipografía y color"</code></pre>
+        </article>
+
+        <article>
+          <h3><code>git pull</code></h3>
+          <p>
+            Descarga los cambios más recientes desde el repositorio remoto, GitHub, y los integra al repositorio local.
+          </p>
+          <p>Se usa para:</p>
+          <ul>
+            <li>Mantener el proyecto actualizado.</li>
+            <li>Evitar conflictos antes de seguir trabajando.</li>
+          </ul>
+          <p>
+            Es recomendable ejecutarlo antes de comenzar a editar archivos.
+          </p>
+        </article>
+
+        <article>
+          <h3><code>git push</code></h3>
+          <p>
+            Envía los commits locales al repositorio remoto.
+          </p>
+          <p>Sirve para:</p>
+          <ul>
+            <li>Respaldar el proyecto en GitHub.</li>
+            <li>Compartir avances.</li>
+            <li>Entregar trabajos académicos.</li>
+          </ul>
+          <p>
+            Después de hacer <code>git push</code>, los cambios quedan visibles en GitHub.
+          </p>
+        </article>
+
+        <article>
+          <h3>Flujo resumido paso a paso</h3>
+          <ol>
+            <li>Editar archivos en el proyecto.</li>
+            <li>Revisar cambios con <code>git status</code>.</li>
+            <li>Preparar cambios con <code>git add</code>.</li>
+            <li>Guardar el estado con <code>git commit -m</code>.</li>
+            <li>Sincronizar antes de subir con <code>git pull</code>.</li>
+            <li>Enviar cambios a GitHub con <code>git push</code>.</li>
+          </ol>
+          <p>
+            Este flujo se repite durante todo el desarrollo del proyecto y constituye la base del uso cotidiano de Git.
+          </p>
+        </article>
+      </section>
+
+      <section id="vscode">
+        <h2>¿Qué papel juega Visual Studio Code?</h2>
+        <p>
+          Visual Studio Code es el espacio de trabajo donde:
+        </p>
+        <ul>
+          <li>Editas HTML y CSS.</li>
+          <li>Ves archivos del proyecto.</li>
+          <li>Usas Git de forma visual.</li>
+          <li>Accedes a la terminal.</li>
+        </ul>
+        <p>
+          VS Code se conecta automáticamente a Git y GitHub si:
+        </p>
+        <ul>
+          <li>Git está instalado.</li>
+          <li>SSH está configurado.</li>
+        </ul>
+
+        <article>
+          <h3>Flujo completo de trabajo</h3>
+          <ol>
+            <li>Editas archivos en Visual Studio Code.</li>
+            <li>Git detecta cambios.</li>
+            <li>Guardas un estado del proyecto, commit.</li>
+            <li>Envías cambios a GitHub, push.</li>
+            <li>El proyecto queda respaldado y sincronizado.</li>
+          </ol>
+        </article>
+      </section>
+
+      <section id="bibliografia">
+        <h2>Documentación y bibliografía</h2>
+
+        <article>
+          <h3>Git · sistema de control de versiones</h3>
+          <ul>
+            <li>Sitio oficial de Git: <a href="https://git-scm.com/">https://git-scm.com/</a></li>
+            <li>Tutorial oficial de Git para principiantes: <a href="https://git-scm.com/docs/gittutorial">https://git-scm.com/docs/gittutorial</a></li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>GitHub · repositorios remotos y colaboración</h3>
+          <ul>
+            <li>Sitio oficial de GitHub: <a href="https://github.com/">https://github.com/</a></li>
+            <li>Documentación oficial de GitHub en español: <a href="https://docs.github.com/es">https://docs.github.com/es</a></li>
+            <li>Introducción oficial a GitHub, Hello World: <a href="https://docs.github.com/es/get-started/start-your-journey/hello-world">https://docs.github.com/es/get-started/start-your-journey/hello-world</a></li>
+            <li>Guía de inicio en GitHub: <a href="https://docs.github.com/es/get-started">https://docs.github.com/es/get-started</a></li>
+            <li>Relación entre Git y GitHub: <a href="https://docs.github.com/es/get-started/using-git/about-git">https://docs.github.com/es/get-started/using-git/about-git</a></li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>SSH · conexión segura con GitHub</h3>
+          <ul>
+            <li>Conectar con GitHub mediante SSH: <a href="https://docs.github.com/es/authentication/connecting-to-github-with-ssh">https://docs.github.com/es/authentication/connecting-to-github-with-ssh</a></li>
+            <li>Generar una nueva llave SSH: <a href="https://docs.github.com/es/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">https://docs.github.com/es/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent</a></li>
+            <li>Agregar una llave SSH a la cuenta de GitHub: <a href="https://docs.github.com/es/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">https://docs.github.com/es/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account</a></li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>Configuración de identidad en Git</h3>
+          <ul>
+            <li>Configuración inicial de Git, nombre y correo: <a href="https://git-scm.com/book/es/v2/Primeros-pasos-Configuración-inicial-de-Git">https://git-scm.com/book/es/v2/Primeros-pasos-Configuración-inicial-de-Git</a></li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>Visual Studio Code · editor y flujo de trabajo</h3>
+          <ul>
+            <li>Sitio oficial de Visual Studio Code: <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></li>
+            <li>Documentación oficial de Visual Studio Code: <a href="https://code.visualstudio.com/docs">https://code.visualstudio.com/docs</a></li>
+            <li>Control de versiones con Git en Visual Studio Code: <a href="https://code.visualstudio.com/docs/sourcecontrol/overview">https://code.visualstudio.com/docs/sourcecontrol/overview</a></li>
+            <li>Uso de GitHub dentro de Visual Studio Code: <a href="https://code.visualstudio.com/docs/sourcecontrol/github">https://code.visualstudio.com/docs/sourcecontrol/github</a></li>
+            <li>Terminal integrada en Visual Studio Code: <a href="https://code.visualstudio.com/docs/terminal/basics">https://code.visualstudio.com/docs/terminal/basics</a></li>
+          </ul>
+        </article>
+      </section>
+    </main>
+
+    <footer id="cierre">
+      <p>Portfolio WebCraft</p>
+      <p><a href="#inicio">Volver al inicio</a></p>
+    </footer>
+  </body>
+</html>
